@@ -25,13 +25,13 @@ matplotlib>=3.3.0
 ## Test Data Format
 ### Data Fields
 
-date: Date in MM/D/YYYY format
-product: Product category identifier (BE, C, G, M, O)
-lir_imp: Linear impressions
-clicks: Number of clicks
-spd: Daily spend value
-order7d: 7-day rolling orders
-sales7d: 7-day rolling sales value
+1. date: Date in MM/D/YYYY format
+2. product: Product category identifier (BE, C, G, M, O)
+3. lir_imp: Linear impressions
+4. clicks: Number of clicks
+5. spd: Daily spend value
+6. order7d: 7-day rolling orders
+7. sales7d: 7-day rolling sales value
 
 ## Key Components
 
