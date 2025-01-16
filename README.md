@@ -22,13 +22,16 @@ scikit-learn>=0.24.0
 matplotlib>=3.3.0
 ```
 
-## Project Structure
+## Test Data Format
+### Data Fields
 
-```
-├── prophet_forecast.py        # Main implementation file
-├── requirements.txt          # Project dependencies
-└── README.md                # This file
-```
+date: Date in MM/D/YYYY format
+product: Product category identifier (BE, C, G, M, O)
+lir_imp: Linear impressions
+clicks: Number of clicks
+spd: Daily spend value
+order7d: 7-day rolling orders
+sales7d: 7-day rolling sales value
 
 ## Key Components
 
@@ -108,4 +111,20 @@ The system generates the following features for each time series:
    - Season (1-4)
 
 3. **Holiday Features**
-   - Promotional events (Black Friday, Cy
+   - Promotional events (Black Friday, Cyber Monday, Prime Days)
+   - Federal holidays
+
+## Model Evaluation
+The system evaluates model performance using:
+
+    - MAPE (Mean Absolute Percentage Error)
+    - Train/test split with configurable test size
+    - Visual inspection through plots
+
+## Customization
+You can customize the forecasting system by:
+
+    - Modifying the ModelConfig parameters
+    - Adding new features in TimeSeriesPreprocessor
+    - Extending DateFeatureGenerator for additional date features
+    - Adjusting Prophet parameters in ProphetForecaster
